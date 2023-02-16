@@ -3,7 +3,7 @@ import DocumentService from '../../services/jsonDoc.service'
 export const pushDocument = async ({commit}, document) => {
     return DocumentService.pushDocument(document).then(
         document => {
-            commit('setDocumentSatus', document)
+            commit('setDocumentStatus', document)
             return Promise.resolve(document)
         },
         error => {
