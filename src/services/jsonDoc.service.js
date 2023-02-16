@@ -12,7 +12,18 @@ class DocumentService {
             headers: authHeader()
         })
         .then(response => {
-            console.log(response.data)
+            return response.data
+        })
+    }
+
+    async getSearchedDocuments(query) {
+        return axios.get(API_URL, {
+            headers: authHeader(),
+            params: {
+                query
+            }
+        })
+        .then(response => {
             return response.data
         })
     }

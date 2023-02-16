@@ -8,18 +8,20 @@
         <td>{{ key }}</td>
         <td>{{ value }}</td>
         <td>
-            <button v-if="key != 'item'" @click="deleteProp(key)">Eliminar</button>
+            <button v-if="key != 'item'" @click="deleteProp(key)" :disabled="hasData">Eliminar</button>
         </td>
     </tr>
   </table>
   <button @click="printJson">Botón de auxilio</button>
+  <button @click="uploadDocument">Subir documento</button>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 export default {
     data() {
         return {
+            hasData: null
         }
     },
     computed: {
@@ -33,7 +35,12 @@ export default {
         },
         deleteProp(key) {
             this.$store.commit('jsonDocument/deleteProp', key)
-        }
+            this.hasData = Object.keys(this.doc).length > 2 ? false : true
+        },
+        uploadDocument() {
+            this.pushDocument(this.doc)
+        },
+        ...mapActions('jsonDocument', ['pushDocument'])
     },
 };
 </script>

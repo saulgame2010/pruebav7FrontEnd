@@ -1,3 +1,5 @@
 export default () => ({
-    doc: {}
+    doc: {},
+    documentStatus: null,
+    docsSearched: null
 })
