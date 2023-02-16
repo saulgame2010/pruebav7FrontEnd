@@ -1,4 +1,4 @@
-export const addProperty = (state, item, propKey, propValue) => {
+export const addProperty = (state, {item, propKey, propValue}) => {
     let properties = {}
     properties[propKey] = propValue
     state.doc = {

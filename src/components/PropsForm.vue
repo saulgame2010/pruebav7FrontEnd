@@ -22,8 +22,8 @@ export default {
     data() {
         return {
             item: null,
-            propKey: "",
-            propValue: "",
+            propKey: null,
+            propValue: null,
             properties: {},
             documentJson: {}
         }
@@ -33,9 +33,14 @@ export default {
     },
     methods: {
         setValues() {
-            console.log(this.item, this.propKey, this.propValue)
-            console.log(this.doc)
-            this.$store.commit('jsonDocument/addProperty', this.item, this.propKey, this.propValue)
+            let jsonParameters = {
+                item: this.item,
+                propKey: this.propKey,
+                propValue: this.propValue
+            }
+            this.$store.commit('jsonDocument/addProperty', jsonParameters)
+            this.propKey = ""
+            this.propValue = ""
         },
     }
 }
