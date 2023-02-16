@@ -24,8 +24,6 @@ export default {
             item: null,
             propKey: null,
             propValue: null,
-            properties: {},
-            documentJson: {}
         }
     },
     computed: {
