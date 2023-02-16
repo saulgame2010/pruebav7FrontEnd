@@ -5,6 +5,7 @@
 
 <script>
 import PropsForm from '@/components/PropsForm.vue';
+import { mapActions, mapState } from 'vuex';
 export default {
   components: { PropsForm },
     data() {
@@ -20,8 +21,10 @@ export default {
         uploadDocument() {
             this.pushDocument(this.doc)
         },
+        ...mapActions('jsonDocument', ['pushDocument'])
     },
     computed: {
+        ...mapState('jsonDocument', ['doc'])
     }
 }
 </script>

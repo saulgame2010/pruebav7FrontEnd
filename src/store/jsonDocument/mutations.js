@@ -17,5 +17,12 @@ export const setDocumentStatus = (state, data) => {
 }
 
 export const getSearchedDocuments = (state, docs) => {
-    state.docsSearched = docs
+    let newDocs = docs === null ? null : docs.map(doc => {
+        return {
+            item: doc.item,
+            ...doc.properties
+        }
+    })
+    console.log(newDocs)
+    state.docsSearched = newDocs
 }

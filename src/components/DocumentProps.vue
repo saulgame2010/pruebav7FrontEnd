@@ -8,7 +8,7 @@
         <td>{{ key }}</td>
         <td>{{ value }}</td>
         <td>
-            <button v-if="key != 'item'" @click="deleteProp(key)" :disabled="hasData">Eliminar</button>
+            <button v-if="key != 'item'" @click="deleteProp(key)">Eliminar</button>
         </td>
     </tr>
   </table>
