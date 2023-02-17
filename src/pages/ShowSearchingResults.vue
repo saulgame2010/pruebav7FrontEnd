@@ -1,31 +1,66 @@
 <template>
   <div>
     <div>
-        <div>Resultados</div>
-        <div>
-            <button :disabled="!docsSearched">Exportar a Excel</button>
-        </div>
+      <div>Resultados</div>
+      <div>
+        <button :disabled="!docsSearched" @click="exportToExcel">
+          Exportar a Excel
+        </button>
+      </div>
     </div>
     <div>
-        <!-- TODO: Agregar el componente que despliega las tablas con los resultados -->
-        <ResultsTable v-for="(item, index) in docsSearched" :key="index" :doc="item" />
+      <!-- TODO: Agregar el componente que despliega las tablas con los resultados -->
+      <ResultsTable
+        v-for="(item, index) in docsSearched"
+        :key="index"
+        :doc="item"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import ResultsTable from '@/components/ResultsTable.vue'
+import { mapActions, mapState } from "vuex";
+import ResultsTable from "@/components/ResultsTable.vue";
+import axios from "axios";
+import authHeader from '@/services/auth-header';
 export default {
-    components: {
-        ResultsTable
+  components: {
+    ResultsTable,
+  },
+  computed: {
+    ...mapState("jsonDocument", ["docsSearched"]),
+  },
+  methods: {
+    async exportToExcel() {
+        console.log(authHeader())
+      try {
+        const response = await axios.post(
+          "http://localhost:8080/api/document/items/export",
+          {
+            docsSearched: this.docsSearched,
+          },
+          {
+            headers: authHeader()
+          },
+          {
+            responseType: "blob",
+          }
+        );
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "exportedData.xlsx");
+        document.body.appendChild(link);
+        link.click();
+      } catch (error) {
+        console.error(error);
+      }
     },
-    computed: {
-        ...mapState('jsonDocument', ['docsSearched'])
-    }
-}
+    ...mapActions("jsonDocument", ["getExcelDoc"]),
+  },
+};
 </script>
 
 <style>
-
 </style>

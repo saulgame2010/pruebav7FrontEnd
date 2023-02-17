@@ -20,3 +20,16 @@ export const getSearchedDocuments = async ({commit}, params) => {
     : await DocumentService.getSearchedDocuments(params)
     commit('getSearchedDocuments', docs)
 }
+
+export const getExcelDoc = async ({commit}, docsSearched) => {
+    return DocumentService.getExcelDoc(docsSearched).then(
+        docsSearched => {
+            commit('setDocumentStatus', docsSearched)
+            commit('resetDocument')
+            return Promise.resolve(document)
+        },
+        error => {
+            commit('setDocumentStatus', error)
+            return Promise.reject(error)
+        })
+}
