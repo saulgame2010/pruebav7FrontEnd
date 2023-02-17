@@ -4,6 +4,10 @@ import Register from "./pages/Register-user.vue";
 
 const routes = [
   {
+    path: "/",
+    redirect: "/login"
+  },
+  {
     path: "/login",
     component: Login,
   },
