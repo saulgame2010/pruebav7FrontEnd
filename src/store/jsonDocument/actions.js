@@ -4,6 +4,7 @@ export const pushDocument = async ({commit}, document) => {
     return DocumentService.pushDocument(document).then(
         document => {
             commit('setDocumentStatus', document)
+            commit('resetDocument')
             return Promise.resolve(document)
         },
         error => {

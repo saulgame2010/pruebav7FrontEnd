@@ -12,6 +12,10 @@ export const deleteProp = (state, propKey) => {
     delete state.doc[propKey]
 }
 
+export const resetDocument = (state) => {
+    state.doc = {}
+}
+
 export const setDocumentStatus = (state, data) => {
     state.documentStatus = data
 }
