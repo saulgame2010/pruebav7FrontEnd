@@ -9,7 +9,6 @@
         <td>{{ value }}</td>
     </tr>
   </table>
-  <button @click="prueba">VEAMOS QUE PASA</button>
 </template>
 
 <script>
@@ -26,9 +25,6 @@ export default {
         }
     },
     methods: {
-        prueba() {
-            console.log(this.jsonDoc)
-        }
     }
 }
 </script>

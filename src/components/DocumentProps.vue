@@ -12,7 +12,6 @@
         </td>
     </tr>
   </table>
-  <button @click="printJson">Botón de auxilio</button>
   <button @click="uploadDocument">Subir documento</button>
 </template>
 
@@ -30,9 +29,6 @@ export default {
     props: {
     },
     methods: {
-        printJson() {
-            console.log(this.doc)
-        },
         deleteProp(key) {
             this.$store.commit('jsonDocument/deleteProp', key)
             this.hasData = Object.keys(this.doc).length > 2 ? false : true

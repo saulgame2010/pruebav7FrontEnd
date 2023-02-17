@@ -9,7 +9,6 @@
       </div>
     </div>
     <div>
-      <!-- TODO: Agregar el componente que despliega las tablas con los resultados -->
       <ResultsTable
         v-for="(item, index) in docsSearched"
         :key="index"
