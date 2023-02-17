@@ -1,6 +1,8 @@
 <template>
-  <h1>Página para buscar documentos</h1>
-  <InputSearch />
+  <div>
+    <h1>Página para buscar documentos</h1>
+  </div>
+  <InputSearch class="input"/>
   <ShowSearchingResults />
 </template>
 
@@ -25,5 +27,22 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid green;
+  margin: 0px auto;
+  width: 50%;
+  display: block;
+}
 </style>

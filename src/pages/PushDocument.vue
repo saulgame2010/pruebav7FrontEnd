@@ -1,5 +1,4 @@
 <template>
-  <h1>Alta de documentos</h1>
   <PropsForm />
 </template>
 
@@ -29,6 +28,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
