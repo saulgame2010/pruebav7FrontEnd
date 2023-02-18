@@ -27,6 +27,5 @@ export const getSearchedDocuments = (state, docs) => {
             ...doc.properties
         }
     })
-    console.log(newDocs)
     state.docsSearched = newDocs
 }

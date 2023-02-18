@@ -34,13 +34,11 @@ export default {
   },
   methods: {
     async exportToExcel() {
-      console.log(authHeader());
+      console.log(this.docsSearched)
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/document/items/export",
-          {
-            docsSearched: this.docsSearched,
-          },
+          "http://localhost:8080/api/document/export",     
+            this.docsSearched,
           {
             headers: authHeader(),
           },
