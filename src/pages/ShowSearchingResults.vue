@@ -34,26 +34,23 @@ export default {
   },
   methods: {
     async exportToExcel() {
-      console.log(this.docsSearched)
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/document/export",     
-            this.docsSearched,
+          "http://localhost:8080/api/document/export",
+          this.docsSearched,
           {
             headers: authHeader(),
-          },
-          {
             responseType: "blob",
           }
         );
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement("a");
         link.href = url;
-        link.setAttribute("download", "exportedData.xlsx");
+        link.setAttribute("download", "data.xlsx");
         document.body.appendChild(link);
         link.click();
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     },
     ...mapActions("jsonDocument", ["getExcelDoc"]),
@@ -87,30 +84,30 @@ export default {
 
 /* Estilos para el botón de exportar a excel */
 button {
- padding: 17px 40px;
- border-radius: 50px;
- border: 0;
- background-color: white;
- box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
- letter-spacing: 1.5px;
- text-transform: uppercase;
- font-size: 15px;
- transition: all .5s ease;
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
 }
 
 button:hover {
- letter-spacing: 3px;
- background-color: hsl(110, 80%, 48%);
- color: hsl(0, 0%, 100%);
- box-shadow: rgb(63, 220, 24) 0px 7px 29px 0px;
+  letter-spacing: 3px;
+  background-color: hsl(110, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(63, 220, 24) 0px 7px 29px 0px;
 }
 
 button:active {
- letter-spacing: 3px;
- background-color: hsl(123, 80%, 48%);
- color: hsl(0, 0%, 100%);
- box-shadow: rgb(31, 220, 24) 0px 0px 0px 0px;
- transform: translateY(10px);
- transition: 100ms;
+  letter-spacing: 3px;
+  background-color: hsl(123, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(31, 220, 24) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
 </style>
