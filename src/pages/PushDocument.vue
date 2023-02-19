@@ -1,3 +1,7 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta página es en donde el usuario puede subir documentos. -->
+<!-- * Aquí se incluye el componente PropForms para agregar la información del documento -->
+
 <template>
   <PropsForm />
 </template>

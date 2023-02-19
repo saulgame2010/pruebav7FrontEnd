@@ -1,3 +1,7 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta página es para que el usuario pueda visualixar los resultados. -->
+<!-- * Aquí se incluye la opción para exportar a Excel -->
+
 <template>
   <div id="container">
     <div id="header">

@@ -1,3 +1,8 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta página es en donde el usuario puede consultar documentos. -->
+<!-- * Aquí se incluye el componente InputSearch para el input de búsqueda. -->
+<!-- * También se incluye el componente de ShowSearchingResults para mostrar los resultados de la búsqueda -->
+
 <template>
   <div>
     <h1>Página para buscar documentos</h1>

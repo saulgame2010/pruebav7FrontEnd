@@ -1,3 +1,9 @@
+/**
+ * * Autor: Saúl García Medina
+ * * Estas son las mutaciones del módulo del store correspondiente al documento JSON.
+ * * Lo que hacen las mutaciones es modificar el estado de este módulo.
+ */
+
 export const addProperty = (state, {item, propKey, propValue}) => {
     let properties = {}
     properties[propKey] = propValue

@@ -1,3 +1,10 @@
+/**
+ * * Autor: Saúl García Medina
+ * * Esta clase tiene como objetivo hacer todas las operaciones para los documentos
+ * * como lo son: Guardar un documento, obtener los documentos buscados y hacer la petición,
+ * * para obtener el archivo de Excel
+ */
+
 import axios from 'axios';
 import authHeader from './auth-header';
 

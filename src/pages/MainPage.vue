@@ -1,3 +1,7 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta página se encarga de mostrar un mensaje de bienvenida al usuario. -->
+<!-- * En caso de que el usuario no haya iniciado sesión, lo redirige a la página de login -->
+
 <template>
     <div class="container">
       <header class="jumbotron">

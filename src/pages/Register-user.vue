@@ -1,3 +1,7 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta es la página de registro, se encaraga de procesar el -->
+<!-- * registro de usuarios en la aplicación -->
+
 <template>
   <div class="col-md-12">
     <div class="card card-container">

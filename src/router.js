@@ -1,3 +1,10 @@
+/**
+ * * Autor: Saúl García Medina
+ * * EL siguiente código corresponde a la configuración del router
+ * * de Vue, aquí se indica el path de cada página así como el archivo de Vue
+ * * que corresponde a cada ruta. Se hace uso de lazy load para cargar los componentes.
+ */
+
 import { createWebHistory, createRouter } from "vue-router";
 import Login from "./pages/Log-in.vue";
 import Register from "./pages/Register-user.vue";

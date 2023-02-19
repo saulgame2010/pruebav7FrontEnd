@@ -1,3 +1,8 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Este código es el componente que se encarga de crear la tabla -->
+<!-- * en donde se enlistan las propiedades que se van agregando -->
+<!-- * al documento JSON que se va a enviar al backend de la aplicación -->
+
 <template>
   <div>
     <h3>Documento a subir</h3>

@@ -1,3 +1,10 @@
+/**
+ * * Autor: Saúl García Medina
+ * * El siguiente código corresponde al módulo de autenticación para el store de vuex.
+ * * Aquí se encuentra el estado (state), las mutaciones(mutations) y acciones(actions)
+ * * que se van a encargar de manjear el store para este módulo.
+ */
+
 import AuthService from '../services/auth.service';
 
 const user = JSON.parse(localStorage.getItem('user'));

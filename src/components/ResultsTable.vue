@@ -1,3 +1,9 @@
+<!-- Autor: Saúl García Medina -->
+<!-- Este es el componente encargado de mostrar los resultados -->
+<!-- de la búsqueda en la página de "Consulta de documentos". -->
+<!-- Lo que hace es dibujar una tabla por cada resultado obtenido. -->
+<!-- La tabla tiene el nombre de la propiedad y su valor -->
+
 <template>
   <table id="props">
     <tr>

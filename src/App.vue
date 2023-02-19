@@ -1,3 +1,8 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Este es el punto inicial de la aplicación. -->
+<!-- * Aquí se construye nuestro router, el cual, dependiendo si el usuario ha -->
+<!-- * iniciado sesión o no, mostrará distintas opciones -->
+
 <template>
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">

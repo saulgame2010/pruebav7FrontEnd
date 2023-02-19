@@ -1,3 +1,11 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Este bloque de código corresponde al componente que se conforma -->
+<!-- * por un conjunto de 3 inputs que reciben el nombre del item del documento -->
+<!-- * así como un input para agregar el nombre de una nueva propiedad y el tercer -->
+<!-- * input se encarga de recibir el valor de la propiedad. -->
+<!-- * Por último, cuenta con un botón para agregar la propiedad al documento JSON -->
+<!-- * que se enviará al backend para se guardado. -->
+
 <template>
   <div>
     <h1>Alta de documentos</h1>

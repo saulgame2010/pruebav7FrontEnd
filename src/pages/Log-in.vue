@@ -1,3 +1,7 @@
+<!-- * Autor: Saúl García Medina -->
+<!-- * Esta es la página de login, se encaraga de procesar el -->
+<!-- * inicio de sesión -->
+
 <template>
   <div class="col-md-12">
     <div class="card card-container">
